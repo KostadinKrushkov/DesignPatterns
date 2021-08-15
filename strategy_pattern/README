@@ -1,0 +1,8 @@
+Strategy is a behavioral design pattern.
+
+The strategy design pattern defines a family of algorithms called strategies or behaviors, encapsulates each one
+and makes them interchangeable from each other and thus the pattern lets the algorithm vary independently from the client that use it.
+The strategies that inherit from the base strategy are called concrete strategies.
+
+This pattern uses composition meaning having an object that holds reference to the strategy that is going to be executed.
+In this case once the navigator object is created it has a default walking strategy, but it can be changed anytime to driving or public transport.
