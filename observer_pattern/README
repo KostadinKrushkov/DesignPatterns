@@ -1,0 +1,10 @@
+The observer is a behavioral design pattern that lets you notify multiple objects about events or changes to state regarding an object.
+
+Problem: An object A wants to have up to date information regarding another object B. So it can try getting the data every millisecond/second/minute...
+But this way there will be a huge amount of requests. The more objects C,D... want to be up to date to object B the worse this becomes.
+Object B will need to respond to every request with an increasing magnitude.
+
+Solution: The objects(observers) that want to be kept up to date can instead subscribe to the object of interest(observable).
+When the state of the observable object is changed all observers get notified. If an observer wants to check the state of an observable it can still pull the data
+
+It uses two types of objects - Observers and Observables in one to many dependency (One Observable to many Observers).
