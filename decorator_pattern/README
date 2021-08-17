@@ -9,7 +9,10 @@ one may decide to create a parameter for each possible addon and check if it has
 Using the same example one could have a combination for an espresso+soy milk class as well as and espresso+milk class,
 as well as espresso class+milk+caramel and so on.
 
-You need to have a base component and some concrete components.
+You need to have a base component and may have some concrete components. Following the example a base component may be
+a beverage and a concrete one may be an espresso, decaf or something else.
 The base component should have a default implementation but it depends on the scenario.
 The decorators are components and own a component at the same time. There needs to be a base decorator and concrete ones.
 This way a decorator can wrap another decorator which in the end wraps a concrete component
+
+The following implementation does not use concrete components so an abstract base component is unnecessary.
