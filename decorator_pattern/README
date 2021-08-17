@@ -1,0 +1,15 @@
+The decorator is a structural design pattern that lets you add some kind of behavior to an object(called components)
+by placing them in wrapper objects(called decorators) that contain such behavior.
+
+Reasons this pattern exist:
+- To avoid code convolution by having each class contain different parameters for each possible option.
+For example if you have a coffee place and it offers different types of coffees as well as different addons to them,
+one may decide to create a parameter for each possible addon and check if it has been added when calculating the value of the beverage.
+- To avoid a class explosion by creating different subclasses for each combination of components.
+Using the same example one could have a combination for an espresso+soy milk class as well as and espresso+milk class,
+as well as espresso class+milk+caramel and so on.
+
+You need to have a base component and some concrete components.
+The base component should have a default implementation but it depends on the scenario.
+The decorators are components and own a component at the same time. There needs to be a base decorator and concrete ones.
+This way a decorator can wrap another decorator which in the end wraps a concrete component
