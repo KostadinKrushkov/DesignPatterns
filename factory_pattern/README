@@ -1,0 +1,12 @@
+The factory method pattern is a creational design pattern that defines an interface for creating an object,
+but lets subclasses decide which class to instantiate and what needs to be passed to a particular object.
+
+You need to have a base product class and a base creator.
+The concrete products are going to be instantiated by the concrete creator classes.
+
+Benefits:
+- Open/Closed principle. You can add new types of products without breaking existing code.
+- Single responsibility principle. You can move product creation into one place making the code easier to support
+- You might need a more complicated object whose parameters need to be decided during runtime. Using a factory it can choose exactly what it needs
+But:
+- The code may become more complicated since you need new more subclasses to implement the pattern.
