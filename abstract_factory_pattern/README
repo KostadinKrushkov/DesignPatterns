@@ -1,0 +1,19 @@
+The abstract factory pattern is a creational design pattern that provides an interface for creating families
+of related or dependant objects without specifying their concrete classes.
+
+The difference between this pattern and factory method pattern is that this pattern creates multiple object while the factory method creates one.
+This means that factories have different methods for creating different objects that are connected.
+
+For example if you are trying to write software for a furniture manufacturer. The manufacturer can create furniture in different styles -
+Classic, Victorian, Modern, etc. To create a chair, a sofa and a table you could use a factory and if you want a specific style,
+you can choose a concrete factory for that style.
+
+This pattern is often used in UI software. For example in grouping object by operating system or dark/light theme, etc.
+
+Benefits:
+- Makes sure the products/objects the factory creates are compatible with each other.
+- Single responsibility principle.
+- Open/Closed principle.
+
+But:
+- The code may become more complicated since you need new more subclasses to implement the pattern.
