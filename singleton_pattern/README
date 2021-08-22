@@ -1,0 +1,21 @@
+Singleton design pattern ensures the a class has only one instance and provides a global access to it.
+
+The implementation is quite simple, but the pythonic way of doing that may seem complex.
+While in java you would just need to hide the constructor and implement a static creation method,
+this version uses a metaclass and adds the creational logic inside the __call__ method of the SingletonMeta class.
+
+There are multiple ways in implementing this pattern in python. A good discussion on the topic is made in the following thread
+https://stackoverflow.com/questions/6760685/creating-a-singleton-in-python
+
+Multiple threads can call the creation method simultaneously and get several instances of Singleton class.
+
+Benefits:
+- You can be sure that a class has only a single instance.
+- You gain a global access point to that instance.
+- The singleton object is initialized only when it’s requested for the first time.
+But:
+- The Singleton pattern can mask bad design, for instance, when the components of the program know too much about each other.
+- The pattern requires special treatment in a multithreaded environment so that multiple threads won’t create a singleton object several times.
+- It may be difficult to unit test the client code of the Singleton because many test frameworks rely on inheritance when producing mock objects.
+
+There are a lot of opinions arguing that all in all you should never use singleton, especially if the application you are writing is expected to grow.
