@@ -31,7 +31,11 @@ class FileProxySingleton(metaclass=SingletonMeta):
 
 if __name__ == '__main__':
     file_proxy = FileProxySingleton()
+    second_file_proxy = FileProxySingleton()
+
+    print(type(file_proxy) == type(second_file_proxy))  # True since both of them get the same instance
+
     file_proxy.write_to_file('Test writing some data\n')
-    file_proxy.append_to_file('Test writing some other data\n')
+    second_file_proxy.append_to_file('Test writing some other data\n')
 
     print(file_proxy.read_from_file())
