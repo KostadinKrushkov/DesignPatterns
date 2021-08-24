@@ -1,0 +1,19 @@
+The command is a behavioral design pattern encapsulates a request as a object thereby letting you parametrize other object
+with different requests, queue or log requests and support undoable operations
+
+A command is supposed to be constructed with a receiver, a invoker needs to send the command to the receiver
+and the receiver needs to do what the request asks.
+
+Commands can be saved in a list or queue so that they can be undone in a historically accurate way.
+This pattern is especially useful in applications where:
+- You want to queue operations, schedule their execution or execute them remotely
+- You want to implement reversible operations
+- You want to parametrize objects with operations
+
+Benefits:
+- Single responsibility principle
+- Open/Closed principle
+- You can implement undo/redo
+- You can batch or execute multiple commands as one complex one
+But:
+- Code becomes more complicated since we introduce a new layer
