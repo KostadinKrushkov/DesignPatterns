@@ -1,0 +1,12 @@
+Adapter is a structural design pattern, that converts the interface of one class into another interface the client expects
+In other words the adapter wraps one of the objects to hide the complexity of the conversion acting as a bridge between the two.
+The wrapped object isn't aware of the adapter.
+
+The pattern consists of a Client that has an Adapter which itself is a Target and has a Adaptee.
+The client contains the business logic of a program.
+
+This pattern is especially useful when:
+- You want to use some existing class that is not compatible with the other code
+- You want to reuse several existing subclasses that lack common functionality
+
+Other similar patterns are bridge, facade, proxy and decorator
