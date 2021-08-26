@@ -1,0 +1,10 @@
+Facade is a structural design pattern that provides a unified interface to a set of interfaces/frameworks/classes or a library in a subsystem.
+It provides a higher level interface that makes the subsystem easier to use.
+
+The pattern uses the principle of least knowledge because of less coupling. In other words talk only to your immediate friends
+If you have object "a" with object "b" and "b" has "c"
+"a" can access "b" but can't access "c" -> reduced coupling (a.b.c it's not allowed to access c from a)
+
+This pattern is especially useful when:
+- You need to have a limited but straightforward interface to a complex system
+- You want to structure a subsystem into layers
