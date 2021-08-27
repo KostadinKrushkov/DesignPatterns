@@ -1,0 +1,26 @@
+Proxy is a structural design pattern, that provides a surrogate or placeholder for another object to control access to it.
+You have a proxy to control the access to the thing on the other side.
+
+A proxy can be remote, virtual or a protection proxy.
+- Remote. Suggested to be used when a resource is remote or in the outside world
+- Virtual. Control access to a resource that is expensive to create. Like caching.
+Only when you need the resource do you get to use it or create it. Otherwise use the proxy instead.
+- Protection. Access management - checking if a particular user has the right to do it.
+Only if the user has the right does the proxy allow access to it.
+
+In any case the point of a proxy is to be used in the same way as the resource it's supposed to give access to, by adding behavior in some way.
+
+The pattern consists of a Subject that is being inherited by the RealSubject and the ProxySubject.
+The ProxySubject has a RealSubject, so it controls when to call it.
+
+This pattern is especially useful when:
+- You have a heavyweight service object that wastes resources by being up all the time
+- Access control -> Protection proxy
+- Local execution of a remote service -> Remote proxy
+- Logging requests - Logging proxy
+- Caching requests results - Caching proxy
+- Smart reference - to be able to dismiss a heavyweight object once there are no clients that use it
+
+But:
+- The code may become more complicated since you introduce new classes
+- The response from the resource/service might get delayed
