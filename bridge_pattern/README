@@ -1,0 +1,19 @@
+Bridge is a structural design pattern that lets you split a large class or a set of closely related classes
+into two hierarchies - abstraction and implementation - which can be developed independently of each other.
+
+In other words the intent of the bridge pattern is to decouple an abstraction from it's implementation so that both can vary independently.
+The pattern consists of an Abstraction, an Implementor, a ConcreteAbstraction and a ConcreteImplementor. The Abstraction has a Implementor
+
+Lets say we have two variations one of a class Shape -> Circle and Square. Then we decide to add the additional Color class -> inherited by Blue and Red.
+It would be suboptimal to create a class for every variation for Shape <-> Color. As they increase exponentially.
+Say we have 2 colors and 2 shapes in the beginning. That would be only 4 classes (RedCircle, RedSquare, BlueCircle, BlueSquare)
+But if we decide to introduce 2 more colors, we will have to create 4 more classes, and after that if we add an additional shape 4 more.
+
+Instead the Shape class can also have a Color. And concrete implementations are independent of each other.
+
+This pattern is especially useful when:
+- You want to divide and organize a monolithic class that has several variants of some functionality
+- You need to extend a class in several independent dimensions
+- You need to switch implementation during runtime
+But:
+- You are making the code more complicated by applying the pattern to a highly cohesive class
