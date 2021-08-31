@@ -1,0 +1,12 @@
+The template method is a behavioural design pattern, that defines the skeleton of an algorithm in an operation deferring some steps to subclasses.
+Template method lets subclasses redefine certain steps of the algorithm without changing the algorithm structure.
+
+The pattern consists of an Abstract class with a defined template_method() and abstract operation methods.
+The Concrete classes that inherit from the Abstract one are supposed to implement those operations.
+
+This pattern is especially useful when:
+- You want to let clients extend only particular steps of an algorithm, but not the whole algorithm or its structure
+- You have several classes that contain almost identical algorithms with some minor differences
+But:
+- You might violate the Liskov substitution principle by suppressing a default step via a subclass e.g. overwriting it to do nothing
+- The pattern tends to be harder to maintain the more steps they have
