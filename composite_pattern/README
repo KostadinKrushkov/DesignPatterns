@@ -1,0 +1,13 @@
+Composite is a structural design pattern, composes objects into tree structures to represent part-whole hierarchies
+It lets clients treat individual objects and compositions of objects uniformly.
+
+The pattern consists of a base class called Component, a Leaf that inherits from it and is a class that has only a value
+and a Composite which also inherits from it, has a value as well as other Components. In this way the pattern creates a tree structure.
+The operation method of the Composite pattern is going to recursively traverse the structure.
+
+Depending on the case you are working on the Composite might be mutable or immutable.
+- For immutable structure you need to pass data to the composite's constructor that is already structured
+- For mutable structures its debated where to place the add and remove methods, but this example places them in the Composite
+This pattern is especially useful when:
+- You want the client code to treat both simple and complex elements uniformly
+- You have to implement a tree-like object structure
