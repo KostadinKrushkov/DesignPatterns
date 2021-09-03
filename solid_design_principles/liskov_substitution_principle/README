@@ -1,0 +1,10 @@
+Substitutability is a principles in OOP stating that in a computer program if S is a subtype of T then objects of type T
+may be replaced by objects of type S. In other words an object of type T may be substituted by object of type S.
+
+Meaning S is a subtype of T -> S is a T and so an object can of type S can substitute and object of type T
+The intent of this principle is to show when and when not to use inheritance
+
+So for example if a we have an Animal class, we should think about what our subtypes will inherit.
+If we place a method called run in the Animal class and implement it in the subtypes Horse, Cat, Dog, it's going to make sense.
+But the moment you decide to create a Whale class or a Pigeon class, you would be breaking Liskov substitution principle,
+because objects of those classes can't perform that activity(don't have the behavior) and so they can't substitute the Animal class.
