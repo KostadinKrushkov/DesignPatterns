@@ -1,0 +1,16 @@
+Iterator is a behavioral design pattern that lets you traverse elements of collection without exposing its underlying representation.
+Collections may be lists, stacks, trees, etc.
+
+The pattern contains a class Iterable, its subtypes concrete iterables, as well as a class Iterator and concrete iterators.
+The client has both Iterator and Iterable. Concrete Iterables represent the different collections.
+Concrete iterables construct a concrete iterator. In some cases the iteratable passes a reference to itself when creating the iterator.
+
+This pattern is especially useful when:
+- You have a complex collection and want to hide its complexity
+- You want to reduce duplication of the traversal code
+- You want to keep track of where you were the last time you got an item of a collection
+- You want iterate over the same collection in parallel because each iterator object contains its own iteration state
+- You want ot traverse Composite trees
+But:
+- Applying the pattern can be overkill if the our app is working only with simple collections
+- Using an iterator may be less efficient that going through elements of some specialized collections directly
