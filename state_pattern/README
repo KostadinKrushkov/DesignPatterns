@@ -1,0 +1,12 @@
+State is a behavioral design pattern allows an object to alter its behavior.
+When its internal state changes the object will appear to change its class.
+
+The pattern consists of a Context that has a State which has subtypes - Concrete States.
+The concrete states are constructed using context.
+
+This pattern is especially useful when:
+- You have an object that behaves differently depending on its current state. (The more states there are the more usefull the pattern is)
+- You have massive conditionals that alter a class according to a classes field
+- You have duplicate code across similar states and transitions of a condition-based state machine
+But:
+- Applying the pattern can be overkill if a state machine has only a few states or rarely changes.
