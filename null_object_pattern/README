@@ -1,0 +1,8 @@
+Null object is a design pattern that replaces the checks for null/None value for a certain object,
+instead providing a default lack of behavior.
+
+Its purpose is to have a lack of action / existence for something. For example a lack of behavior for a button,
+or a null iterator that doesn't return anything.
+
+Implementing the pattern is as simple as replacing a returned null with a null object and not checking if the object is null.
+The benefit of not checking for null values for an object comes with the negative of creating yet another class.
